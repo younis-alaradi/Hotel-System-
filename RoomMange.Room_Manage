@@ -1,9 +1,0 @@
-﻿CREATE TABLE [dbo].[Room_Manage] (
-    [Invoice No]   INT          NOT NULL,
-    [Room type ]   VARCHAR (50) NOT NULL,
-    [Room number ] INT          NOT NULL,
-    [Date IN ]     DATETIME     NOT NULL,
-    [Date Out]     DATETIME     NOT NULL,
-    PRIMARY KEY CLUSTERED ([Invoice No] ASC)
-);
-
