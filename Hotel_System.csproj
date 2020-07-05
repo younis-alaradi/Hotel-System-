@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F9D3CFC-A8E9-4CA6-B5EC-23CF58DAE6AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel_System</RootNamespace>
+    <AssemblyName>Hotel_System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.20\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connect.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerDataSet.cs">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drinking_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drinking_form.Designer.cs">
+      <DependentUpon>Drinking_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoodFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodFORM.Designer.cs">
+      <DependentUpon>FoodFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bahrani_Food.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bahrani_Food.Designer.cs">
+      <DependentUpon>Bahrani_Food.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerRecipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerRecipt.Designer.cs">
+      <DependentUpon>CustomerRecipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuadiFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuadiFood.Designer.cs">
+      <DependentUpon>SuadiFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IndainFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndainFood.Designer.cs">
+      <DependentUpon>IndainFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_form.Designer.cs">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage ClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage ClientsForm.Designer.cs">
+      <DependentUpon>Manage ClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageReversationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageReversationForm.Designer.cs">
+      <DependentUpon>ManageReversationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WatingForm.Designer.cs">
+      <DependentUpon>WatingForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bahrani_Food.resx">
+      <DependentUpon>Bahrani_Food.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerRecipt.resx">
+      <DependentUpon>CustomerRecipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drinking_form.resx">
+      <DependentUpon>Drinking_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodFORM.resx">
+      <DependentUpon>FoodFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndainFood.resx">
+      <DependentUpon>IndainFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_form.resx">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage ClientsForm.resx">
+      <DependentUpon>Manage ClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageReversationForm.resx">
+      <DependentUpon>ManageReversationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SuadiFood.resx">
+      <DependentUpon>SuadiFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WatingForm.resx">
+      <DependentUpon>WatingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CustomerDataSet.xsc">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerDataSet.xss">
+      <DependentUpon>CustomerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Connect.datasource" />
+    <None Include="Properties\DataSources\Customer.datasource" />
+    <None Include="Properties\DataSources\CustomerDataSet.CustomerDataTable.datasource" />
+    <None Include="Properties\DataSources\CustomerDataSet.CustomerRow.datasource" />
+    <None Include="Properties\DataSources\CustomerDataSet.CustomerRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\CustomerDataSet.CustomerRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\CustomerDataSet.datasource" />
+    <None Include="Properties\DataSources\DataSet1.datasource" />
+    <None Include="Properties\DataSources\Login_form.datasource" />
+    <None Include="Properties\DataSources\MainForm.datasource" />
+    <None Include="Properties\DataSources\ManageReversationForm.datasource" />
+    <None Include="Properties\DataSources\ManageRommForm.datasource" />
+    <None Include="Properties\DataSources\Manage_ClientsForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Room_dataDataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomerData.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomerData_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CustomerData.mdf</DependentUpon>
+    </Content>
+    <Content Include="Imge\Login_picture.png" />
+    <None Include="Resources\family_room.jpg" />
+    <None Include="Resources\twin_bed.jpg" />
+    <None Include="Resources\single_bed.jpg" />
+    <None Include="Resources\strawberry_drinking.jpg" />
+    <None Include="Resources\BAnana_juice_drinking.jpg" />
+    <None Include="Resources\waterMelon_drinking.jpg" />
+    <None Include="Resources\mango_juice_drinking.jpg" />
+    <None Include="Resources\orange_juice_drinking.jpg" />
+    <None Include="Resources\water_drinking.jpg" />
+    <None Include="Resources\Muhammer_Bahrani.jpg" />
+    <None Include="Resources\Tradtional_bahrani.jpg" />
+    <None Include="Resources\Legumes_Bahrani.jpg" />
+    <None Include="Resources\saleeg_saudi.jpg" />
+    <None Include="Resources\mandi_saudi.jpg" />
+    <None Include="Resources\habsa_saudi.jpg" />
+    <None Include="Resources\curry.jpg" />
+    <None Include="Resources\bryani_handi.jpg" />
+    <None Include="Resources\Barbqi_handi.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
